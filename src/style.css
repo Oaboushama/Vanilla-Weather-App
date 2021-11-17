@@ -1,3 +1,51 @@
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #70757a;
+  border-radius: 10px;
+  background-color: #132743;
+}
+
 h1 {
-  color: blue;
+  font-family: "PT Mono", monospace;
+  padding: 20px;
+  margin: 20px 0 10px;
+  line-height: 29px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  color: #fffefe;
+}
+
+li {
+  font-family: "PT Mono", monospace;
+  list-style: none;
+  color: #fffefe;
+  font-size: 10;
+}
+
+.weather-cloudy img {
+  height: 100px;
+  width: 120px;
+  margin: 10px; auto;
+
+}
+.weather-cloudy{
+  color: #fffefe;
+  font-size: 20px;
+}
+.col{
+  color: #fffefe;
+  text-align: center;
+    font-family: "PT Mono", monospace;
+
+}
+
+p{
+  color: #fffefe;
+    font-family: "PT Mono", monospace;
+}
+.status{
+  color: #70757a;
 }
