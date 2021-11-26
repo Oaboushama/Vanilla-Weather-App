@@ -1,5 +1,9 @@
+body {
+  font-family: "PT Mono", monospace;
+}
+
 .weather-app {
-  max-width: 600px;
+  max-width: 500px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #70757a;
@@ -9,7 +13,8 @@
 
 h1 {
   font-family: "PT Mono", monospace;
-  padding: 20px;
+  text-align: center;
+  padding: 10px;
   margin: 20px 0 10px;
   line-height: 29px;
   font-weight: 700;
@@ -18,34 +23,58 @@ h1 {
   color: #fffefe;
 }
 
+ul {
+  font-family: "PT Mono", monospace;
+  list-style: none;
+  color: #fffefe;
+  display: inline-block;
+}
 li {
   font-family: "PT Mono", monospace;
   list-style: none;
   color: #fffefe;
-  font-size: 10;
+  display: inline-block;
 }
-
-.weather-cloudy img {
-  height: 100px;
-  width: 120px;
-  margin: 10px; auto;
-
-}
-.weather-cloudy{
+.weather-cloudy {
   color: #fffefe;
   font-size: 20px;
 }
-.col{
-  color: #fffefe;
-  text-align: center;
-    font-family: "PT Mono", monospace;
-
+.weather-cloudy img {
+  margin-right: 20px;
+  display: inline-block;
+  height: 60px;
+  margin-top: unset;
+  vertical-align: top;
+  width: 60px;
+}
+.weather-cloudy strong {
+  display: inline-block;
+  font-size: 48px;
+  line-height: 1;
+  vertical-align: top;
+}
+.weather-cloudy small {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  margin-left: -1px;
 }
 
-p{
-  color: #fffefe;
-    font-family: "PT Mono", monospace;
+.col-9 {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
 }
-.status{
-  color: #70757a;
+.col {
+  color: #fffefe;
+  text-align: left;
+  font-family: "PT Mono", monospace;
+}
+
+p {
+  color: #fffefe;
+  font-family: "PT Mono", monospace;
+  padding: 6px;
 }
