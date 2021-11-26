@@ -31,10 +31,13 @@ ul {
 }
 li {
   font-family: "PT Mono", monospace;
+  text-transform: capitalize;
+
   list-style: none;
   color: #fffefe;
   display: inline-block;
 }
+
 .weather-cloudy {
   color: #fffefe;
   font-size: 20px;
