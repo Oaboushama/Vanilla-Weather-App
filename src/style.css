@@ -31,8 +31,6 @@ ul {
 }
 li {
   font-family: "PT Mono", monospace;
-  text-transform: capitalize;
-
   list-style: none;
   color: #fffefe;
   display: inline-block;
@@ -77,7 +75,17 @@ li {
 }
 
 p {
-  color: #fffefe;
+  color: #;
   font-family: "PT Mono", monospace;
   padding: 6px;
+}
+
+.weather-cloudy .active {
+  color: #fffefe;
+  cursor: default;
+  text-underline-offset: none;
+}
+
+.weather-cloudy .active :hover {
+  text-decoration: none;
 }
