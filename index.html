@@ -15,9 +15,19 @@
     <div class="container">
         <div  class="weather-app">
 <form id="search-form">
-    <div class="form-example">
-        <input type="text" placeholder="Search City" id="search-input" />
+    <div class="row">
+        <div class="form-example">
+        <div class="col-6">
+          <input type="text" placeholder="Search City" id="city-input" class="form-control" autocomplete="off" />
+        </div>
+       <div class="col-3">
+        <input type="submit" value="search" class="btn btn-primary">
+       </div>
+            
     </div>
+    
+    </div>
+
 </form>
 <h1 id="City" ></h1>
 <ul>

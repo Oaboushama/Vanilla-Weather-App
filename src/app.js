@@ -34,8 +34,23 @@ function formatDate(timestamp) {
 }
 
 
-let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
-let city="London"
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiURL).then(displayTemperature);
+
+function search(city) {
+let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(displayTemperature);
+
+}
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityinputElement = document.querySelector("#city-input");
+    search(cityinputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("london");
