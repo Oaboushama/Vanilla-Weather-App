@@ -5,7 +5,7 @@ body {
 .weather-app {
   max-width: 500px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #70757a;
   border-radius: 10px;
   background-color: #132743;
@@ -34,6 +34,7 @@ li {
   list-style: none;
   color: #fffefe;
   display: inline-block;
+  padding: 0px;
 }
 
 .weather-cloudy {
@@ -75,7 +76,7 @@ li {
 }
 
 p {
-  color: #;
+  color: #fffefe;
   font-family: "PT Mono", monospace;
   padding: 6px;
 }
@@ -83,9 +84,19 @@ p {
 .weather-cloudy .active {
   color: #fffefe;
   cursor: default;
-  text-underline-offset: none;
+  text-decoration: none;
 }
 
 .weather-cloudy .active :hover {
   text-decoration: none;
+}
+footer {
+  font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: black;
+  text-align: center;
+  margin: -30px auto;
+  padding: 4;
 }

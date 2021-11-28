@@ -4,7 +4,7 @@ function displayTemperature(response) {
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     let cityElement = document.querySelector("#City");
     cityElement.innerHTML = response.data.name;
-    let descriptionElement = document.querySelector("#descrition");
+    let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let humidityElement = document.querySelector("#Humidity");
     humidityElement.innerHTML = response.data.main.humidity;
