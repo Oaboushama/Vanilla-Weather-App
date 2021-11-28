@@ -12,7 +12,8 @@ function displayTemperature(response) {
     windElement.innerHTML = Math.round(response.data.wind.speed);
     let dateElement = document.querySelector("#Date");
     dateElement.innerHTML= formatDate(response.data.dt * 1000);
-
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
 }
 
@@ -34,6 +35,7 @@ function formatDate(timestamp) {
 
 
 let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${apiKey}&units=metric`;
+let city="London"
+let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiURL).then(displayTemperature);
