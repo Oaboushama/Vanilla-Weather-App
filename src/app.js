@@ -44,6 +44,25 @@ let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
 
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = `
+     <div class="row">
+        <div class="col">
+            <div class="weather-forecast-date"> Friday</div>
+              <br>
+            ☀️
+            <br>
+            <div class="weather-forecast.temperature">
+                <span class="weather-forecast-temperature-max"> 26°</span>
+                <span class="weather-forecast-temperature-min">20°</span>
+           </div>
+        </div>
+        </div>
+        </div>
+`;
+
+}
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -83,3 +102,4 @@ let CelsiusLink = document.querySelector("#celsius-link");
 CelsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("london");
+displayForecast();

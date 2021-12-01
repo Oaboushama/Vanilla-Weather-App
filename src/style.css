@@ -100,3 +100,22 @@ footer {
   margin: -30px auto;
   padding: 4;
 }
+
+.weather-forecast {
+  color: #fffefe;
+}
+.weather-forecast-date {
+  color: #fffefe;
+  font-size: 15px;
+}
+.weather-forecast-temperature-max {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 15px;
+}
+.weather-forecast-temperature-min {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 15px;
+  opacity: 0.5;
+}
