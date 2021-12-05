@@ -34,8 +34,6 @@ function getForecast(coordinates) {
 
 
 
-
-
 function formatDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
@@ -52,7 +50,12 @@ function formatDate(timestamp) {
     return `${day} ${hours}:${minutes}`
 }
 
-
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+    return days[day]
+}
 
 
 function search(city) {
@@ -65,20 +68,25 @@ let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
 function displayForecast(response) {
     let forecastElement = document.querySelector("#forecast");
 
+    let forecast = response.data.daily;
+
     let forecastHTML = `<div class="row">`;
-    let days = ["Mon", "Tue", "Wed", "Thu"];
-    days.forEach(function (day) {
-        forecastHTML = forecastHTML + `
+    forecast.forEach(function (Forecastday, index) {
+        if (index < 6) {
+            forecastHTML = forecastHTML + `
         <div class="col">
-            <div class="weather-forecast-date"> ${day}</div>
-            ☀️
+            <div class="weather-forecast-date"> ${formatDay(Forecastday.dt)}</div>
+         <img src="http://openweathermap.org/img/wn/${Forecastday.weather[0].icon}@2x.png" alt="" width= "42" />
+ 
             <div class="weather-forecast.temperature">
-                <span class="weather-forecast-temperature-max"> 26°</span>
-                <span class="weather-forecast-temperature-min">20°</span>
+                <span class="weather-forecast-temperature-max"> ${Math.round(Forecastday.temp.max)}°</span>
+                <span class="weather-forecast-temperature-min">${Math.round(Forecastday.temp.min)}°</span>
            </div>
         </div>`;
+        }
 
-    })
+        })
+
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
 }
@@ -121,4 +129,3 @@ let CelsiusLink = document.querySelector("#celsius-link");
 CelsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("london");
-displayForecast();
