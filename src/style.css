@@ -119,3 +119,23 @@ footer {
   line-height: 15px;
   opacity: 0.5;
 }
+.col-md-2 {
+  margin-right: 7px;
+  width: 75px;
+  white-space: nowrap;
+  padding-top: 7px;
+}
+.Humidity {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+.Wind {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}

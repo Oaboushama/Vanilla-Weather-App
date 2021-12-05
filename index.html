@@ -16,10 +16,10 @@
         <div  class="weather-app">
 <form id="search-form">
     <div class="row">
-        <div class="col-6">
+        <div class="col-8">
             <input type="text" placeholder="Search City" id="city-input" class="form-control" autocomplete="off" />
         </div>
-        <div class="col-3">
+        <div class="col-4">
             <input type="submit" value="search" class="btn btn-primary">
         </div>
 
@@ -28,27 +28,28 @@
 </form>
 <h1 id="City" ></h1>
 <ul>
-    <li >Last updated: </li> <span id="Date"></span>
+    <li >Last updated: </li>
+     <span id="Date"></span><br>
     <li id= "description"></li> 
 </ul>
    
     
 <div class="row">
-    <div class= "col-6 ">
+    <div class= "col-12 ">
         <div class=" clearfix weather-cloudy">
-<img src="cloudy.png" width="300px"   class="float-left"  id="icon" />
-
+<img src="cloudy.png" width="300px" class="float-left" id="icon" />
 
 <strong id="temperature">  </strong> <small> <a href="#" id="celsius-link" class="active">°C | <a href="#" id="fahrenheit-link">°F</a></small> 
 </div>
-<div class="row">
-    <div class="col-9">
 
+<div class="row">
+    <div class="col-sm">
 <ul>
-    <li>
+    <li class="Humidity">
         Humidity: <span id="Humidity"></span>%
     </li>
-    <li>
+    <br>
+    <li class="Wind">
         Wind: <span id="Wind"></span>   km/h
 </ul>
     </div>
