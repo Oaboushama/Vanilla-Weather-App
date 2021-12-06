@@ -101,31 +101,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
-function displayFahrnheitTemperature(event) {
-    event.preventDefault();
-    CelsiusLink.classList.remove("active");
-    FahrnheitLink.classList.add("active");
-
-    let fahrnheitTemperature = (celsiusTemperature * 9 / 5) + 32;
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(fahrnheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-    event.preventDefault();
-     FahrnheitLink.classList.remove("active");
-    CelsiusLink.classList.add("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-let celsiusTemperature = null;
-
-
-let FahrnheitLink = document.querySelector("#fahrenheit-link");
-FahrnheitLink.addEventListener("click", displayFahrnheitTemperature);
-
-
-let CelsiusLink = document.querySelector("#celsius-link");
-CelsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 search("london");
